@@ -1,25 +1,35 @@
-# Virtual environment
-.venv/
-
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 
+# Virtual environments
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
 # IDE
-.vscode/
 .idea/
+.vscode/
 
-# Build
-dist/
-build/
+# Generated files
+output/
+
+# Input data
+input/
+
+# Test artifacts
+*.tcx
+
+# Python packaging
 *.egg-info/
+build/
+dist/
 
-# Test
+# Pytest
 .pytest_cache/
 
-# Local data
-input/*
-output/*
-!input/.gitkeep
-!output/.gitkeep
+# Ruff
+.ruff_cache/
