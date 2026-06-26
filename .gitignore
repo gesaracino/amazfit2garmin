@@ -1,0 +1,25 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Test
+.pytest_cache/
+
+# Local data
+input/*
+output/*
+!input/.gitkeep
+!output/.gitkeep
