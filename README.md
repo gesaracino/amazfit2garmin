@@ -146,12 +146,27 @@ These files can be imported into Garmin Connect.
 
 ## Roadmap
 
-- Command Line Interface (CLI)
-- Additional activity mappings
-- Heart rate support
-- GPS support
-- FIT file generation
-- Automated tests
+### Completed
+
+- [x] Parse Zepp `SPORT.csv` exports
+- [x] Generate Garmin-compatible TCX files
+- [x] Preserve workout date, duration and calories
+- [x] Export running distance
+- [x] Export non-distance activities with zero distance
+- [x] Generate Garmin-compatible filenames
+- [x] Command-line interface (CLI)
+- [x] Automated test suite with `pytest`
+- [x] Code linting with `ruff`
+- [x] GitHub Actions continuous integration
+
+### Planned
+
+- [ ] Test coverage reporting (`pytest-cov`)
+- [ ] Support additional Zepp sport types
+- [ ] Improve TCX metadata and extensions where useful
+- [ ] Configurable logging (`--verbose`)
+- [ ] Package distribution on PyPI
+- [ ] GitHub Release `v1.0.0`
 
 ---
 

@@ -1,9 +1,5 @@
-from pathlib import Path
-
 from amazfit2garmin.mapper import GarminSport
-from amazfit2garmin.parser import parse_csv
-from amazfit2garmin.parser import to_float, to_int
-
+from amazfit2garmin.parser import parse_csv, to_float, to_int
 
 CSV_HEADER = (
     "type,startTime,sportTime(s),maxPace(/meter),"

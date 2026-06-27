@@ -8,7 +8,6 @@ from amazfit2garmin.converter import (
     get_distance_meters,
 )
 
-
 TCX_NAMESPACE = "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2"
 
 XSI_NAMESPACE = "http://www.w3.org/2001/XMLSchema-instance"

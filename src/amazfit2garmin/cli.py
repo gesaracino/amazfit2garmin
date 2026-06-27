@@ -1,6 +1,6 @@
+import argparse
 from collections import Counter
 from pathlib import Path
-import argparse
 
 from amazfit2garmin.filename import build_filename
 from amazfit2garmin.parser import parse_csv

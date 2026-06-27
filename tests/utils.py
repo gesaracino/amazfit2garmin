@@ -1,6 +1,5 @@
 from pathlib import Path
-from xml.etree import ElementTree
-
+from xml.etree.ElementTree import Element, parse
 
 TCX_NAMESPACE = "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2"
 
@@ -14,10 +13,10 @@ def parse_tcx(path: str | Path) -> Element:
     Parse a TCX file and return its root XML element.
     """
 
-    return ElementTree.parse(path).getroot()
+    return parse(path).getroot()
 
 
-def find(root, xpath: str):
+def find(root: Element, xpath: str):
     """
     Find a single XML element using the Garmin TCX namespace.
     """
@@ -25,7 +24,7 @@ def find(root, xpath: str):
     return root.find(xpath, NS)
 
 
-def find_all(root, xpath: str):
+def find_all(root: Element, xpath: str):
     """
     Find all XML elements matching an XPath using the Garmin TCX namespace.
     """
