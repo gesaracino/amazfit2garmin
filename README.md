@@ -55,7 +55,7 @@ Additional activity mappings will be added in future releases.
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your_username>/amazfit2garmin.git
+git clone https://github.com/gesaracino/amazfit2garmin.git
 
 cd amazfit2garmin
 ```
@@ -80,21 +80,22 @@ Install the project:
 pip install -e .
 ```
 
+The `amazfit2garmin` command will then be available in the active virtual environment.
+
 ---
 
 ## Usage
 
-Current version:
-
-```bash
-python3 main.py
-```
-
-Future CLI:
+Run the converter:
 
 ```bash
 amazfit2garmin input/SPORT.csv output/
 ```
+
+where:
+
+- `input/SPORT.csv` is the Zepp export file.
+- `output/` is the directory where the generated TCX files will be written.
 
 ---
 
@@ -160,15 +161,14 @@ These files can be imported into Garmin Connect.
 - [x] Automated test suite with `pytest`
 - [x] Code linting with `ruff`
 - [x] GitHub Actions continuous integration
+- [x] Test coverage reporting (`pytest-cov`)
 
 ### Planned
 
-- [ ] Test coverage reporting (`pytest-cov`)
+- [ ] Export GPS track data (if available)
+- [ ] Support additional activity metrics
 - [ ] Support additional Zepp sport types
-- [ ] Improve TCX metadata and extensions where useful
-- [ ] Configurable logging (`--verbose`)
-- [ ] Package distribution on PyPI
-- [ ] GitHub Release `v1.0.0`
+- [ ] Publish package on PyPI
 
 ---
 
@@ -183,3 +183,9 @@ Please open an Issue before submitting large changes.
 ## License
 
 MIT License
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the complete release history.
