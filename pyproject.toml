@@ -34,6 +34,7 @@ classifiers = [
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
+    "pytest-cov>=6.0",
     "ruff>=0.5",
 ]
 
@@ -49,7 +50,11 @@ amazfit2garmin = "amazfit2garmin.cli:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-addopts = "-v"
+addopts = """
+-v
+--cov=amazfit2garmin
+--cov-report=term-missing
+"""
 
 [tool.ruff]
 line-length = 88
@@ -60,4 +65,9 @@ select = [
     "E",
     "F",
     "I",
+]
+
+[tool.coverage.report]
+omit = [
+    "src/amazfit2garmin/__main__.py",
 ]

@@ -1,6 +1,6 @@
 # amazfit2garmin
 
-![CI](https://github.com/<tuo-utente>/amazfit2garmin/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/gesaracino/amazfit2garmin/actions/workflows/ci.yml/badge.svg)
 
 Convert Amazfit/Zepp workout exports into Garmin TCX files that can be imported into Garmin Connect.
 
