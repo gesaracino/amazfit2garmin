@@ -81,6 +81,13 @@ Install the project:
 pip install -e .
 ```
 
+To install development dependencies for testing and linting (pytest, pytest-cov, and ruff), run this command:
+
+```bash
+pip install -e .[dev]
+```
+
+
 The `amazfit2garmin` command will then be available in the active virtual environment.
 
 ---
