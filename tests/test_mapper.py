@@ -33,3 +33,11 @@ def test_bodyweight_mapping():
 def test_unknown_mapping():
 
     assert get_garmin_sport(999) == GarminSport.OTHER
+
+
+def test_biking_sport_name():
+    assert get_sport_name(9) == "Outdoor Cycling"
+
+
+def test_biking_mapping():
+    assert get_garmin_sport(9) == GarminSport.BIKING

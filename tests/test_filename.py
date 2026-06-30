@@ -52,3 +52,14 @@ def test_build_filename_zero_padded_index(running_activity):
 
     assert filename.startswith("000123_")
     assert filename.endswith("_running.tcx")
+
+
+def test_build_filename_for_biking_activity(
+    biking_activity,
+):
+    filename = build_filename(
+        3,
+        biking_activity,
+    )
+
+    assert filename.endswith("_biking.tcx")

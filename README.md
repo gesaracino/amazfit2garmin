@@ -38,6 +38,7 @@ The project was initially developed for my own migration, but it is designed to 
 | Zepp | Garmin |
 |------:|---------|
 | 1 | Running |
+| 9 | Biking |
 | 16 | Other (Bodyweight Workout) |
 
 Additional activity mappings will be added in future releases.

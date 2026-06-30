@@ -54,3 +54,24 @@ def bodyweight_activity():
         min_pace=0.228,
         max_pace=0.0,
     )
+
+
+@pytest.fixture
+def biking_activity():
+    return Activity(
+        zepp_sport_type=9,
+        zepp_sport_name="Biking",
+        garmin_sport=GarminSport.BIKING,
+        start_time=datetime(
+            2024,
+            6,
+            30,
+            7,
+            48,
+            11,
+            tzinfo=timezone.utc,
+        ),
+        duration_seconds=8775,
+        distance_meters=42924.0,
+        calories_kcal=871,
+    )

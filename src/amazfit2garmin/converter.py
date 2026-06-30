@@ -10,7 +10,10 @@ def get_distance_meters(activity: Activity) -> float:
     with a distance of 0 meters to avoid affecting Garmin statistics.
     """
 
-    if activity.garmin_sport == GarminSport.RUNNING:
+    if activity.garmin_sport in (
+        GarminSport.RUNNING,
+        GarminSport.BIKING,
+    ):
         return activity.distance_meters
 
     return 0.0

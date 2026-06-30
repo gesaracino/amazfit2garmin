@@ -1,5 +1,7 @@
 from dataclasses import replace
 
+import pytest
+
 from amazfit2garmin.converter import (
     get_average_speed,
     get_distance_meters,
@@ -36,3 +38,22 @@ def test_zero_duration_average_speed_is_zero(running_activity):
     )
 
     assert get_average_speed(activity) == 0.0
+
+
+def test_biking_distance_is_preserved(
+    biking_activity,
+):
+    assert (
+        get_distance_meters(biking_activity)
+        == 42924.0
+    )
+
+
+def test_biking_average_speed(
+    biking_activity,
+):
+    assert get_average_speed(
+        biking_activity
+    ) == pytest.approx(
+        42924 / 8775
+    )

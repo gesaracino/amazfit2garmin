@@ -161,3 +161,45 @@ def test_last_trackpoint_distance_matches_activity(tmp_path, running_activity):
 
     assert last_distance is not None
     assert last_distance.text == "7534.0"
+
+
+def test_activity_has_biking_sport(
+    tmp_path,
+    biking_activity,
+):
+    output = tmp_path / "activity.tcx"
+
+    TcxWriter().write(
+        biking_activity,
+        output,
+    )
+
+    root = parse_tcx(output)
+
+    activity = find(
+        root,
+        ".//tcx:Activity",
+    )
+
+    assert activity.attrib["Sport"] == "Biking"
+
+
+def test_biking_distance_is_written(
+    tmp_path,
+    biking_activity,
+):
+    output = tmp_path / "activity.tcx"
+
+    TcxWriter().write(
+        biking_activity,
+        output,
+    )
+
+    root = parse_tcx(output)
+
+    distance = find(
+        root,
+        ".//tcx:DistanceMeters",
+    )
+
+    assert distance.text == "42924.0"

@@ -8,6 +8,8 @@ The format is inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0
 
 ### Added
 
+- Support for Zepp activity type 9 (Biking).
+
 ### Changed
 
 ### Fixed

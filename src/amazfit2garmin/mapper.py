@@ -4,6 +4,7 @@ from enum import Enum
 
 class GarminSport(str, Enum):
     RUNNING = "Running"
+    BIKING = "Biking"
     OTHER = "Other"
 
 
@@ -22,6 +23,10 @@ SPORT_MAP = {
     1: SportMapping(
         name="Outdoor Running",
         garmin_sport=GarminSport.RUNNING,
+    ),
+    9: SportMapping(
+        name="Outdoor Cycling",
+        garmin_sport=GarminSport.BIKING,
     ),
     16: SportMapping(
         name="Bodyweight Training",
