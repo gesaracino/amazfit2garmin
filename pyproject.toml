@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 license = { text = "MIT" }
 
 authors = [
-    { name = "Gerardo Saracino", email = "gersaremail-github@yahoo.it " }
+    { name = "Gerardo Saracino", email = "gersaremail-github@yahoo.it" }
 ]
 
 keywords = [
@@ -27,6 +27,9 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]

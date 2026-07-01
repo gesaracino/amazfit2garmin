@@ -25,6 +25,7 @@ The project was initially developed for my own migration, but it is designed to 
 - Preserve:
   - activity date and time
   - duration
+  - distance (where applicable)
   - calories
   - activity type
 - Deterministic file naming
@@ -81,10 +82,10 @@ Install the project:
 pip install -e .
 ```
 
-To install development dependencies for testing and linting (pytest, pytest-cov, and ruff), run this command:
+For development, install the optional dependencies for testing and linting:
 
 ```bash
-pip install -e .[dev]
+pip install -e ".[dev]"
 ```
 
 
@@ -132,8 +133,9 @@ One TCX file is generated for every activity.
 Example:
 
 ```
-000001_2026-06-25_05-12-50_other.tcx
-000002_2026-06-23_04-34-56_running.tcx
+000001_2026-06-30_07-48-11_biking.tcx
+000002_2026-06-25_05-12-50_other.tcx
+000003_2026-06-23_04-34-56_running.tcx
 ...
 ```
 
